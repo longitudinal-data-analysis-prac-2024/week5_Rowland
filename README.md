@@ -63,6 +63,8 @@ ggplot(anscombe_quartet, aes(x=x,y=y)) +
   facet_wrap(~dataset)
 ```
 
+![anscombe_quartet plot]("Users/rluo/Documents/Longitudinal Data Analysis/anscombe_quartet.png")
+
 **save the plot**
 
 ```

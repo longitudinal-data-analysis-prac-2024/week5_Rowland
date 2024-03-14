@@ -1,8 +1,14 @@
 ---
 title: "Week5_practice"
 author: "RowlandLuo"
-date: "`r Sys.Date()`"
-output: html_document
+date:  "14/03/24"
+output: 
+  html_document:
+  toc: true
+  toc_depth: 6
+  toc_float: true
+  code_floating: show
+fig_height: 5
 ---
 
 ```{r setup, include=FALSE}
@@ -10,7 +16,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-rm(list=ls())
 library(tidyverse)
 ```
 
@@ -28,7 +33,6 @@ library(tidyverse)
 *Anscombe, F. J. (1973). "Graphs in Statistical Analysis". American Statistician. 27 (1): 17–21. doi:10.1080/00031305.1973.10478966. JSTOR 2682899.*
 
 ```{r}
-file_path <- ""
 anscombe_quartet <-  readRDS("anscombe_quartet.rds")
 ```
 
@@ -60,9 +64,7 @@ anscombe_quartet %>%
 <span style = "color:blue"> All four datasets have the same means for x and y. For dataset 1 to 3, the mimimum value of x is 4; and the minimum value of x is 8 for only dataset 4. The minimum values of y differ across the four dataset, with dataset 2 having the smallest minimum y value (3.1), and dataset 3 having the largest minimum y value (5.39). Similarly, for dataset 1 to 3, the maximum value of x is 14; and for dataset 4, the maximum value of x is 19. Dataset 2 again has the smallest maximum y value and dataset 3 again has the biggest maximum y value. All four datasets have very similar correlation coefficient (though dataset_4's x and y correlation coefficient is slightly larger by 0.001). This means that for all four datasets, the correlations between x and y are positive and relatively strong (close to 1); furthermore, the degrees of correlation for the four dataset are approximately the same.</span>
 
 **let's plot the data with ggplot:**
-```{r}
 ~~require(ggplot2)~~
-```
 <span style = "color:blue"> I wouldn't use require() here. Since the package tidyverse already contains ggplot2, I would simply delete this line of code. If we need a package that is not included in tidyverse already, I would use library() function.</span>
 ```{r, echo=TRUE}
 ggplot(anscombe_quartet, aes(x=x,y=y)) +
@@ -73,7 +75,7 @@ ggplot(anscombe_quartet, aes(x=x,y=y)) +
 
 **save the plot**
 ```{r}
-ggsave("anscombe_quartet.png", width = 20, height = 20, units = "cm", dpi = 500)
+ggsave(".../dataset/anscombe_quartet.png", width = 20, height = 20, units = "cm", dpi = 500)
 ```
 
 **what do the plots tell us about the different datasets?**
@@ -135,7 +137,7 @@ ggplot(datasaurus_dozen, aes(x=x,y=y)) +
 
 **save the plot**
 ```{r}
-ggsave("datasaurus_dozen.png", width = 20, height = 20, units = "cm", dpi = 500)
+ggsave(".../dataset/datasaurus_dozen.png", width = 20, height = 20, units = "cm", dpi = 500)
 ```
 
 **what conclusions can you draw for the plots and summary statistics? **

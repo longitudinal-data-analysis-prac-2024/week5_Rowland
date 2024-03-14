@@ -63,7 +63,7 @@ ggplot(anscombe_quartet, aes(x=x,y=y)) +
   facet_wrap(~dataset)
 ```
 
-![amscombe_quartet plot](https://github.com/RowlandLuo/longitudinal-data-analysis-prac-2024/week5_Rowland/main/anscombe_quartet.png?raw=true)
+![amscombe_quartet plot](.../dataset/anscombe_quartet.png)
 
 **save the plot**
 
@@ -113,6 +113,7 @@ ggplot(datasaurus_dozen, aes(x=x,y=y)) +
   geom_smooth(method = "lm",formula = "y ~ x") +
   facet_wrap(~dataset)
 ```
+![datasaurus plot](.../dataset/datasaurus_dozen.png)
 
 **calculate the correlations and summary statistics for x and y in all datasets:**
 

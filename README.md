@@ -63,7 +63,7 @@ ggplot(anscombe_quartet, aes(x=x,y=y)) +
   facet_wrap(~dataset)
 ```
 
-![anscombe_quartet plot]("Users/rluo/Documents/Longitudinal Data Analysis/anscombe_quartet.png")
+![amscombe_quartet plot](https://github.com/RowlandLuo/longitudinal-data-analysis-prac-2024/week5_Rowland/main/anscombe_quartet.png?raw=true)
 
 **save the plot**
 
